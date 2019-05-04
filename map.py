@@ -7,7 +7,7 @@ import pickle
 import sys, pygame
 from pygame.locals import*
 
-filename = "../probe_data_map_matching/Partition6467LinkData.csv"
+filename = "../probe_data_map_matching/LinkData_processed.csv"
 
 width=600
 height=1000
@@ -63,7 +63,7 @@ def drawLines(l, p):
             pygame.draw.line(screen,Color_line,(i[j-1][0],i[j-1][1]),(i[j][0],i[j][1]))
 
     for i in p:
-        pygame.draw.circle(screen,(0,255,0), (i[0], i[1]), 1)
+        pygame.draw.circle(screen,(0,255,0), (i[0], i[1]), 3)
     
     with open('mapped_probes.pkl', 'rb') as f:
         mylist = pickle.load(f)

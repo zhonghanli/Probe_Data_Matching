@@ -119,7 +119,7 @@ def findClosestLine(probe, mapped_segments):
                 if dist < min_dist:
                     min_dist = dist
                     i.append(sqrt( (projection[0] - i[0][0])**2 + (projection[1] - i[0][1])**2 )) #dist from segment ref
-                    i.append(sqrt( (projection[0] - x)**2 + (projection[1] - y)**2 )) #probe point to map-matched probe point distance
+                    i.append(dist) #probe point to map-matched probe point distance
                     closest = i #includes pvid
     return closest
 

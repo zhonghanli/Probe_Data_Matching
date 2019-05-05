@@ -7,7 +7,7 @@ import pickle
 import sys, pygame
 from pygame.locals import*
 
-filename = "../probe_data_map_matching/LinkData_processed.csv"
+filename = "../probe_data_map_matching/Partition6467LinkData.csv"
 
 width=600
 height=1000
@@ -26,8 +26,8 @@ def extractUTMPointsFromLink(row):
         x, y, z, u = utm.from_latlon(float(split_ll[0]), float(split_ll[1]))
 
         #scale
-        y= int((y-5608275)/600)
-        x=int((x-460213)/600)
+        y= int((y-5578275)/600)
+        x=int((x-450213)/600)
 
         points.append([x,y])
     return points
@@ -45,8 +45,8 @@ def extractProbePoints():
             x, y, z, u = utm.from_latlon(float(row[3]), float(row[4]))
 
              #scale
-            y= int((y-5608275)/600)
-            x= int((x-460213)/600)
+            y= int((y-5578275)/600)
+            x= int((x-450213)/600)
 
             probepoints.append([x,y])
 

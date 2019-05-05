@@ -17,8 +17,6 @@ class Probe():
         self.altitude = float(row[5])
         self.speed = float(row[6])
         self.heading = float(row[7])
-        self.distance = 0
-        self.potential_links = []
         self.coordinates = np.array([float(row[4])])
 
     def utm_coords(self):
